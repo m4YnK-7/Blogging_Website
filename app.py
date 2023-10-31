@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, url_for
+from flask import Flask, request, render_template, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import joinedload
 from datetime import datetime
@@ -43,13 +43,16 @@ class Category(db.Model):
         return '<Category %r>' % self.name
 
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def reg():
-	return render_template('register.html')
+	if request.method == 'POST':
+		return '**** Implementing DB ****'
+	else:
+		return render_template('register.html')
 
 @app.route('/login')
 def login():
-    return render_template('login.html')
+	return render_template('login.html')
 
 @app.route('/home')
 def home():
@@ -59,3 +62,4 @@ def home():
 if __name__ == '__main__':
 	app.run()
 	#db.create_all()
+	
