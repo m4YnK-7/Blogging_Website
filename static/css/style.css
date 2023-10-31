@@ -3,54 +3,36 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-html,body{
-    width:100%;
-    height:100%;
+body{
+  margin:0;
 }
-#main
-{
-    width:30%;
-    height:100%;
-    background-color: blue;
-}
-
-.circular-button {
-    display: inline-block;
-    width: 25px; /* You can adjust the size as needed */
-    height: 25px; /* Same as width for a perfect circle */
-    background-color: #f1f2f4; /* Change the background color */
-    border-radius: 50%; /* Makes it a circle */
-    text-align: center;
-    line-height: 20px; /* Vertically centers the text */
-    color:#1cb0e8; /* Text color */
-    font-family: "Arial", sans-serif;
-    text-decoration: none;
-}
-
 .wrapper{
     display: flex;
-    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    
   }
   
   .wrapper .sidebar{
-    width: 250px;
-    height: 100%;
+    top: 100px;
+    left: 1px;
+    width: 270px;
+    height: 120%;
     background: #ffffff;
-    padding: 30px 0px;
     position: fixed;
   }
     
   .wrapper .sidebar ul li{
-    padding: 15px;
-    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid #000000;
     border-bottom: 1px solid rgba(0,0,0,0.05);
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 10px solid rgba(255,255,255,0.05);
+    list-style-type: none;
   }    
   
   .wrapper .sidebar ul li a{
     color: #dbdfe3;
     display: block;
+    text-decoration: none;
   }
   
   .wrapper .sidebar ul li:hover{
@@ -61,3 +43,14 @@ html,body{
   }
 
 
+.wrapper .new_post{
+  padding-top: 1px;
+  background-color : #0091ea;
+  color : #ffffff;
+ 
+  }
+.wrapper .new_post ul li{
+  font-size: 40px;
+  text-decoration: none;
+  list-style-type: none;
+}
