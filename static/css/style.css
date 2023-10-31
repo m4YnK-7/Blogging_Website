@@ -4,55 +4,69 @@
     box-sizing: border-box;
 }
 body{
-  margin:0;
+  padding: 0px;
+  margin:0px;
+  position: relative;
 }
-.wrapper{
+ 
+ .sidebar{
     display: flex;
     font-weight: bold;
     font-size: 18px;
-    
-  }
-  
-  .wrapper .sidebar{
-    top: 100px;
-    left: 1px;
+    top: 80px;
     width: 270px;
-    height: 120%;
+    height: 100%;
     background: #ffffff;
     position: fixed;
   }
     
-  .wrapper .sidebar ul li{
+  .sidebar ul li{
+    padding: 12px;
+    width: 240px;
     border-bottom: 1px solid #000000;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     border-top: 10px solid rgba(255,255,255,0.05);
     list-style-type: none;
   }    
   
-  .wrapper .sidebar ul li a{
+  .sidebar ul li a{
     color: #dbdfe3;
     display: block;
     text-decoration: none;
   }
   
-  .wrapper .sidebar ul li:hover{
+  .sidebar ul li:hover{
     background-color: #f0f9fe;
   }
-  .wrapper .sidebar ul li:hover a{
+  .sidebar ul li:hover a{
     color: #0091ea;
+    width: 240px;
   }
 
+  .new_post {
+    font-weight: bold;
+    position: absolute; 
+    left: 50px;
+    display: inline-block;
+    top : 460px;
+    padding: 15px 30px;
+    background-color: #3498db; /* Blue color */
+    color: #fff; /* Text color */
+    border-radius: 25px; /* Round rectangle shape */
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
 
-.wrapper .new_post{
-  padding-top: 1px;
-  background-color : #0091ea;
-  color : #ffffff;
- 
-  }
-.wrapper .new_post ul li{
-  font-size: 40px;
-  text-decoration: none;
-  list-style-type: none;
+.right{
+  position: fixed;
+  font-weight: bold;
+  font-size: 20px;
+  right: 400px;
+  width: 1px;
+  height: 640px;
+  background-color: rgba(0,0,0,0.1);
 }
  .container{
     position: fixed;
@@ -66,7 +80,7 @@ body{
  }
  .search-bar{
   position: fixed;
-  top:0;
+  top:10px;
   right:0;
   width: 100%;
   max-width: 400px;
@@ -74,6 +88,7 @@ body{
   display: flex;
   border-radius: 20px;
   padding: 10px 20px;  
+  
  }
 
  .search-bar input{
@@ -85,3 +100,30 @@ body{
   font-size: 20px;
   color: #0091ea;
  }
+
+ .reads{
+  position: absolute;
+  top:100px;
+  left: 20px;    
+ }
+
+ .box{
+    width: 360px;
+    right: 0px;
+    height: 450px;
+    background-color: #fff;
+    color: #0091ea;
+    border:1px solid rgba(0,0,0,0.2);
+   }
+
+.Middle{
+  position: absolute;
+  left: 270px;
+  width: 1px;
+  height: 640px;
+  background-color: rgba(0,0,0,0.05);
+}
+
+.pagename{
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
