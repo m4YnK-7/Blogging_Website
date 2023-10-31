@@ -60,4 +60,35 @@ html,body{
     color: #0091ea;
   }
 
+ .container{
+    position: fixed;
+    right:0;
+    top:0;
+    width: 80%;
+    min-height: 100vh;
+    padding: 5%;
+    display: flex;
+   
+ }
+ .search-bar{
+  position: fixed;
+  top:0;
+  right:0;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  border-radius: 20px;
+  padding: 10px 20px;  
+ }
 
+ .search-bar input{
+  background: #f0f9fe;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  color: #0091ea;
+ }
+ 
