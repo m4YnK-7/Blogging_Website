@@ -4,28 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - OnlyBlogs</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/login.css')}}">
 </head>
 <body>
     <div class="login-container">
-        <div class="login-form">
-            <h1>Login</h1>
-            <form>
-                <input type="text" placeholder="Username or Email">
-                <input type="password" placeholder="Password">
-                <button type="button" id="login-button">Login</button>
-            </form>
-            <div class="forgot-password">
-                <a href="#">Forgot Password?</a>
+            <div class="login-form">
+                <h1>Login</h1>
+                <form>
+                    <input type="text" placeholder="Username or Email"><br>
+                    <input type="password" placeholder="Password"><br>
+                    <button type="button" id="login-button">Login</button>
+                </form>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="col">
+                    <a href="#" class="fb btn">
+                      <i class="fa fa-facebook fa-fw"></i> Login with Facebook<br>
+                    </a>
+                    <a href="#" class="google btn">
+                      <i class="fa fa-google fa-fw"></i> Login with Google<br>
+                    </a>
+                    <a href="#" class="twitter btn">
+                        <i class="fa fa-twitter fa-fw"></i> Login with X<br>
+                      </a>
+                </div>
             </div>
-        </div>
+
+            
     </div>
+    
     <script>
         //Assuming authorization from DB
         //Implementation when DB implemented.
         document.getElementById("login-button").addEventListener("click", function() {
             window.location.href = "{{ url_for('views.home') }}";
         });
-    </script>
+    </script> 
 </body>
 </html>
