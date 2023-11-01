@@ -126,6 +126,7 @@ body{
 .pagename{
   position: absolute;
   top: 60px;
+  left: 300px;
   width: 900px;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.1);
