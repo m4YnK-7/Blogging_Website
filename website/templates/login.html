@@ -14,6 +14,23 @@
                     <input type="text" placeholder="Email" name="email"><br>
                     <input type="password" placeholder="Password" name="password"><br>
                     <input type="submit" id = "login-button" value="Submit">
+                    {% with messages = get_flashed_messages(with_categories=True) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                {% if category == "error" %}
+                                    <div class="alert alert-danger alter-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                    </div>
+                                {% else %}
+                                    <div class="alert alert-success alter-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
                 </form>
                 <div class="forgot-password">
                     <a href="#">Forgot Password?</a>
