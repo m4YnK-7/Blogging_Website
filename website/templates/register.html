@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register- OnlyBlos</title>
-    <link rel="stylesheet" href="{ url_for('static', filename='css/style.css') }}">
+    <title>Sign-up   - OnlyBlogs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
 </head>
 <body>
-    <div class="registration-container">
-        <div class="registration-form">
-            <h1>Register</h1>
-            <form action="/" method="POST">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirm Password">
-                <input type="submit" value="Submit">
-            </form>
-            <div class="login-link">
-                <p>Already have an account? <a href="{{ url_for('auth.login') }}">Log in</a></p>
-            </div>
-        </div>
+    <div class="login-container">
+            <div class="login-form">
+                <h1>Sign-up</h1>
+                <form method="post">
+                    <input type="text" placeholder="Create an username" name="first_name"><br>
+                    <input type="text" placeholder="Enter your email-id" name="email"><br>
+                    <input type="password" placeholder="Password" name="password1"><br>
+                    <input type="password" placeholder="Confirm Password" name="password2"><br>
+                    <input type="submit" id = "login-button" value="Submit">
+                </form>
+
+                <div class="login-link">
+                    <p>Already have an account? <a href="{{ url_for('auth.login') }}">Log in</a></p>
+                </div>
+               
+                <div class="col">
+                    <a href="#" class="fb btn">
+                      <i class="fa fa-facebook fa-fw"></i> Sign-up with Facebook<br>
+                    </a>
+                    <a href="#" class="google btn">
+                      <i class="fa fa-google fa-fw"></i> Sign-up with Google<br>
+                    </a>
+                    <a href="#" class="twitter btn">
+                        <i class="fa fa-twitter fa-fw"></i> Sign-up with X<br>
+                      </a>
+                </div>
+            </div>    
     </div>
+    
 </body>
 </html>

@@ -9,9 +9,12 @@ class User(db.Model,UserMixin):
     name = db.Column(db.String(150))
     blogs = db.relationship('Blogs')
 
+    def is_active(self):
+        return True 
+
 
 class Blogs(db.Model):
     id = db.Column(db.Integer , primary_key = True)
-    data = db.Column(db.__dict__)
+    data = db.Column(db.String(1000))
     date = db.Column(db.DateTime(timezone = True),default = func.now())
     user_id = db.Column(db.Integer , db.ForeignKey('user.id'))
