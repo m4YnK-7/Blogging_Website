@@ -1,5 +1,5 @@
-from flask import Blueprint, render_template, url_for, request, flash,redirect
-from .models import User
+from flask import Blueprint, render_template, url_for, request, flash, redirect, session
+from .models import User, Blogs
 from flask_login import login_user, login_required, logout_user, current_user
 # from werkzeug.security import generate_password_hash,check_password_hash
 from . import db
@@ -24,10 +24,10 @@ def reg():
 			new_user = User(email=email, name=first_name, password=password1)
 			db.session.add(new_user)
 			db.session.commit()
-			login_user(user ,remember=True)
+			print(email,first_name,password1)
 			flash('Account created successfully', category='success')
 			print("Account created")
-			return redirect(url_for('views.home'))
+			return redirect(url_for('views.login'))
 
 	return render_template('register.html',user=current_user)
 
@@ -46,7 +46,6 @@ def login():
 		print(email)
 		user = User.query.filter_by(email=email).first()
 		if user:
-			print("Account created")
 			if user.password == password:
 				flash('Logged in successfully!', category='success')
 				login_user(user, remember=True)
@@ -61,6 +60,18 @@ def login():
 			print("NO email")
 
 	return render_template("login.html",user=current_user)
+
+@views.route('/new-post')
+@login_required
+def create_post():
+	if request.method == 'POST':
+		link= request.form.get('link')
+		desc = request.form.get('desc')
+		data = Blogs(by=current_user.username, link=link, desc=desc)
+		db.session.add(data)
+		db.session.commit()
+		return redirect(url_for('views.posts'))
+	return render_template('createpost.html')
 
 
 @views.route('/home')

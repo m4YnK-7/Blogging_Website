@@ -22,7 +22,7 @@
             <li><a href="{{ url_for('views.wallet') }}"><i class="bi bi-wallet2"></i> Wallet</a></li>
             <li><a href="{{ url_for('views.usr_prof') }}"><i class="bi bi-person-circle"></i> My Profile</a></li>
             <li><a href="{{ url_for('views.settings') }}"><i class="bi bi-gear"></i> Settings</a></li>
-            <button class="new_post" href="#"><i class = "bi bi-plus"></i>New Post</button>
+            <button id= "newpost-button" class="new_post"><i class = "bi bi-plus"></i>New Post</button>
         </ul> 
         
     </div>
@@ -49,7 +49,11 @@
         <div class = "pagename"></div>
 
     </div>
-    
+    <script>
+        document.getElementById("newpost-button").addEventListener("click", function() {
+            window.location.href = "{{ url_for('views.create_post') }}";
+        });
+    </script> 
 
 
 </body>
