@@ -21,8 +21,8 @@ body{
   }
     
   .sidebar ul li{
-    padding: 12px;
-    width: 240px;
+    padding: 16px;
+    width: 270px;
     border-bottom: 1px solid #000000;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     border-top: 10px solid rgba(255,255,255,0.05);
@@ -31,7 +31,6 @@ body{
   
   .sidebar ul li a{
     color: #dbdfe3;
-    display: block;
     text-decoration: none;
   }
   
@@ -40,7 +39,7 @@ body{
   }
   .sidebar ul li:hover a{
     color: #0091ea;
-    width: 240px;
+    width: 270px;
   }
 
   .new_post {
@@ -48,13 +47,13 @@ body{
     position: absolute; 
     left: 25px;
     display: inline-block;
-    top : 470px;
+    top : 570px;
     padding: 15px 70px;
     background-color: #3498db; /* Blue color */
     color: #fff; /* Text color */
     border-radius: 35px; /* Round rectangle shape */
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     border: none;
 }
@@ -118,31 +117,28 @@ body{
 
 .Middle{
   position: absolute;
-  left: 270px;
+  left: 300px;
   width: 1px;
   height: 640px;
   background-color: rgba(0,0,0,0.05);
-  font-size: 20px;
-  font-weight: bold;
 }
 
 .pagename{
   position: absolute;
   top: 60px;
-  width: 610px;
+  width: 900px;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  position: relative;
-  margin: 0;
+.top_text{
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  font-size: 26px;
+  font-weight: bold;
+  font: Helvetica;
+  text-align: center;
 }
 
 .login-container {

@@ -64,7 +64,9 @@ def login():
 
 
 @views.route('/home')
+@login_required
 def home():
+	
 	return render_template('home.html',user=current_user)
 
 @views.route('/reading-list')
