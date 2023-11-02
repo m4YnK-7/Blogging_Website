@@ -15,7 +15,7 @@ Welcome to OnlyBlogs! This README provides an overview of the project, its purpo
 ## Features
 
 - Content categorisations
-- pay-per-read model (based on no. of chapters read)
+- pay-as-you-go and dynamic pricing model
 - Reads (Curated , short and quick blogs to quickly go through)
 - Organised and user-friendly reading list
 - In-app currency to incentivise reading
@@ -24,25 +24,25 @@ Welcome to OnlyBlogs! This README provides an overview of the project, its purpo
 ## Installation
 
 - To to run the files you will need the following libraries in python :
-- Flask , SQLAlchemy 
+- Flask , Flask-SQLAlchemy 
 - 
 
 ```bash
 # Example installation steps
 pip install flask
-pip install SQLAlchemy
+pip install Flask-SQLAlchemy
 git clone https://github.com/m4YnK-7/OnlyBlogs.git
 cd OnlyBlogs
-python3 main.py
+python main.py #for windows
 ```
 
 ## Usage Guide
 
 OnlyBLogs is not just a typical blogging platform; it's a unique space designed to make your reading experience more engaging and rewarding. Here's how you can use our distinctive features to your advantage:
 
-### Pay-Per-Read Model
+### Pay-as-you-go Dynamic Pricing Model
 
-- With our innovative Pay-Per-Read model, you only pay for the chapters you read. No need to purchase entire books or subscriptions.
+- With our innovative Pay-as-you-go dynamic pricing model, you only pay for the chapters you read. No need to purchase entire articles.
 - Simply access the chapters you're interested in, and the system will charge you accordingly.
 
 ### Reads - Curated Quick Blogs
@@ -59,15 +59,16 @@ OnlyBLogs is not just a typical blogging platform; it's a unique space designed 
 
 - We've introduced an in-app currency system to reward your dedication to reading. The more you read, the more you earn.
 - Use your earned currency to unlock premium content, access special features, and interact with our vibrant community.
+- Read-eem your earns
 
 ### Seamless Payment System with MetaMask
 
 - We've integrated the power of MetaMask for a seamless and secure payment system.
-- With MetaMask, you can make microtransactions for the chapters you read, ensuring your financial transactions are smooth and reliable.
+- With MetaMask, you can make microtransactions for the chapters you read, ensuring your financial transactions are safe and reliable.
 
 ## Get Started
 
-1. **Sign Up**: Create your account on [Your Blogging Website Name] to access all these amazing features.
+1. **Sign Up**: Create your account on OnlyBlogs to access all these amazing features.
 2. **Explore Reads**: Visit the "Reads" section to dive into quick and curated blogs.
 3. **Build Your Reading List**: Start curating your reading list by adding articles, chapters, and blogs you want to read later.
 4. **Earn In-App Currency**: As you read, you'll earn in-app currency that you can use for various benefits.
@@ -75,7 +76,7 @@ OnlyBLogs is not just a typical blogging platform; it's a unique space designed 
 
 ## Enjoy a New Reading Experience
 
-[Your Blogging Website Name] is dedicated to making your reading experience enjoyable, convenient, and rewarding. Start exploring our platform today and embrace the future of blogging and reading.
+OnlyBlogs is dedicated to making your reading experience enjoyable, convenient, and rewarding. Start exploring our platform today and embrace the future of blogging and reading.
 
 Happy reading!
 
@@ -83,7 +84,7 @@ Happy reading!
 
 Here's a list of all the Contributers(Team Members):
 1. **Mayank Singh**
-   - GitHub: [m4YnK-07](https://github.com/m4YnK-07)
+   - GitHub: [m4YnK-07](https://github.com/m4YnK-7)
    
 2. **Nishantak Panigrahi**
    - GitHub: [nishantak](https://github.com/nishantak)
