@@ -84,7 +84,7 @@ Happy reading!
 
 Here's a list of all the Contributers(Team Members):
 1. **Mayank Singh**
-   - GitHub: [m4YnK-07](https://github.com/m4YnK-7)
+   - GitHub: [m4YnK-7](https://github.com/m4YnK-7)
    
 2. **Nishantak Panigrahi**
    - GitHub: [nishantak](https://github.com/nishantak)
